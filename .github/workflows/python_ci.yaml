@@ -1,0 +1,31 @@
+# .github/workflows/python_ci.yml
+
+name: Python CI
+
+on:
+  push:
+    branches: [ main ] # Kích hoạt workflow khi có push lên nhánh 'main'
+  pull_request:
+    branches: [ main ] # Kích hoạt workflow khi có pull request đến nhánh 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Chạy job trên môi trường Ubuntu mới nhất
+
+    steps:
+    - name: Checkout code # Bước 1: Lấy mã nguồn từ kho lưu trữ
+      uses: actions/checkout@v4
+
+    - name: Set up Python # Bước 2: Thiết lập môi trường Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9' # Bạn có thể chỉ định phiên bản Python cụ thể, ví dụ: '3.8', '3.9', '3.10', '3.11', '3.12'
+
+    - name: Install dependencies # Bước 3: Cài đặt các thư viện cần thiết (bao gồm pytest)
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest
+
+    - name: Run tests # Bước 4: Chạy các test case
+      run: |
+        pytest
