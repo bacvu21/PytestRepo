@@ -10,12 +10,12 @@ Test CICD với pytest function tính, tổng, hiệu, nhân chia
 ## Cú pháp chạy files
 
 ### STEP 1: 
-    git clone https://github..
+    git clone https://github.com/bacvu21/PytestRepo.git
 ### STEP 2:
 ```
-        python -m  venv venv 
-        .\venv\Scripts\activate
-        pip install pytest
+    python -m  venv venv 
+    .\venv\Scripts\activate
+    pip install pytest
 ```
 ### STEP 3:    
     pytest
