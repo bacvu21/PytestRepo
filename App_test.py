@@ -19,5 +19,5 @@ def test_multiply():
     assert multiply(7, 0) == 0
 
 # Ví dụ về một test case cố ý bị lỗi để bạn thấy CI/CD sẽ thất bại
-# def test_add_fail_example():
-#     assert add(1, 1) == 3 # Lỗi này sẽ khiến test thất bại
+def test_add_fail_example():
+    assert add(1, 1) == 3 # Lỗi này sẽ khiến test thất bại
