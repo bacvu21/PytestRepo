@@ -5,8 +5,9 @@
 
 ## folder tree
 
-    # App.py -> main function 
-    # App_test.py -> test case contain
+        your_project_name/
+    ├── app.py
+    └── test_app.py
 
 ## Cú pháp chạy files
 
